@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vvGrad</title>
+    <link rel="icon" href="assets/images/nav-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white" id="header" aria-label="Fifth navbar example">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Expand at lg</a> -->
+            <div class="logo">
+                <img src="assets/images/nav-logo.png" alt="">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05"
+                aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">What We Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">What We Think</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Dreemjob.html">Dreem Job</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="study-Abroad.html">Study Abroad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Free-Masterclass.html">Free Masterclass</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Refer-and-Earn.html">Refer & Earn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- ////////////////////////////////////////// -->
+<div class="hero-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6"></div>
+            <div class="col-lg-4 col-md-6"></div>
+            <div class="col-lg-4 col-md-6">
+                <div class="heroform">
+                    <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit();">
+                        <div class="section1">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="input">
+                                        <input formControlName="name" name="name" required="" placeholder="First name*"
+                                            type="text"
+                                            [ngClass]="enquiryForm.controls['name'].hasError('required') && enquiryForm.controls['name'].touched?'hs-input invalid error error-border':'hs-input invalid error'"
+                                            inputmode="text" autocomplete="given-name" value="">
+                                        <!-- <div class="col-12"
+                                            *ngIf="enquiryForm.controls['name'].hasError('required') && enquiryForm.controls['name'].touched">
+                                            <p class="error">Name is required</p>
+                                        </div>
+                                        <div class="col-12"
+                                            *ngIf="enquiryForm.controls['name'].hasError('email') && enquiryForm.controls['name'].touched">
+                                            <p class="error"> Name valid E-mail</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input">
+                                        <input id="phone-54c5e18b-2171-478e-9007-aff8dbf96035_7124"
+                                            formControlName="mobile" name="mobile" required="" placeholder="Mobile*"
+                                            type="tel"
+                                            [ngClass]="enquiryForm.controls['mobile'].hasError('required') && enquiryForm.controls['mobile'].touched?'hs-input invalid error error-border':'hs-input invalid error'"
+                                            inputmode="tel" value="">
+                                        <!-- <div class="col-12"
+                                            *ngIf="enquiryForm.controls['mobile'].hasError('required') && enquiryForm.controls['mobile'].touched">
+                                            <p class="error">Mobile is required</p>
+                                        </div>
+                                        <div class="col-12"
+                                            *ngIf="enquiryForm.controls['mobile'].hasError('pattern') && enquiryForm.controls['mobile'].touched">
+                                            <p class="error"> Enter valid Mobile</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input"><input id="email-54c5e18b-2171-478e-9007-aff8dbf96035_7124"
+                                            name="email" required="" placeholder="Email*" type="email"
+                                            formControlName="email" name="email"
+                                            [ngClass]="enquiryForm.controls['email'].hasError('required') && enquiryForm.controls['email'].touched?'hs-input invalid error error-border':'hs-input invalid error'"
+                                            inputmode="email" autocomplete="email" value="">
+                                        <!-- <div class="col-12"
+                                            *ngIf="enquiryForm.controls['email'].hasError('required') && enquiryForm.controls['email'].touched">
+                                            <p class="error">Email is required</p>
+                                        </div>
+                                        <div class="col-12"
+                                            *ngIf="enquiryForm.controls['email'].hasError('email') && enquiryForm.controls['email'].touched">
+                                            <p class="error"> Enter valid Email</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input"><select
+                                            id="year_of_graduation__dropdown_-54c5e18b-2171-478e-9007-aff8dbf96035_7124"
+                                            required=""
+                                            [ngClass]="enquiryForm.controls['education'].hasError('required') && enquiryForm.controls['education'].touched?'hs-input invalid error error-border':'hs-input invalid error'"
+                                            formControlName="education" name="education"
+                                            name="year_of_graduation__dropdown_">
+                                            <option value="" selected>Year of Graduation*</option>
+                                            <option value="B2018">Before 2019</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2023">2024</option>
+                                            <option value="A2023">After 2024</option>
+                                        </select>
+                                        <!-- <div class="col-12"
+                                            *ngIf="enquiryForm.controls['education'].hasError('required') && enquiryForm.controls['education'].touched">
+                                            <p class="error">Graduation is required</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input"><select id="program-54c5e18b-2171-478e-9007-aff8dbf96035_7124"
+                                            required="" formControlName="courseName" name="courseName"
+                                            [ngClass]="enquiryForm.controls['courseName'].hasError('required') && enquiryForm.controls['courseName'].touched?'hs-input invalid error error-border':'hs-input invalid error'"
+                                            name="program">
+                                            <option value="">Program*</option>
+                                            <ng-container *ngFor="let option of courses">
+                                                <option [value]="option.value">{{option.label}}</option>
+                                            </ng-container>
+                                        </select>
+                                        <!-- <div class="col-12"
+                                            *ngIf="enquiryForm.controls['courseName'].hasError('required') && enquiryForm.controls['courseName'].touched">
+                                            <p class="error">CourseName is required</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input">
+                                        <input id="rfcode-54c5e18b-2171-478e-9007-aff8dbf96035_712" name="rfcode"
+                                            formControlName="rfcode" name="rfcode" placeholder="Referral Code "
+                                            type="text" class="hs-input invalid error" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="hero-button">
+                                        <button type="submit" class="button">Enquiry Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- ////////////////////////////////////// -->
+<div class="Corporate">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6">
+                <div class="Corporate-head">
+                    <h4>About Us</h4>
+                    <p>Accelerate your career path with CareerTransforms' cutting-edge training programs. Gain the
+                        skills and knowledge you need to advance in your field and achieve your professional goals.
+                        Unlock new opportunities and propel your career forward with us!</p>
+                    <p>We offer comprehensive corporate training programs designed to equip our team with the skills
+                        and knowledge they need to excel in today's rapidly evolving digital landscape. From
+                        technical skills to leadership development, we tailor our training programs to meet your
+                        specific needs and objectives.</p>
+                </div>
+                <div class="Corporate-button">
+                    <a routerLink="/about"> <strong>Read More</strong> </a>
+                </div>
+                
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <div class="corporate-img">
+                    <img src="assets/images/career-aboutus-img.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ////////////////////////////////////////// -->
+
+<div class="our-value" id="our-value">
+    <div class="container">
+
+        <div class="row">
+            <div class=" col-lg-6 col-md-6">
+                <div class="our-image middle" attr.data-aos="fade-right" >
+                    <img src="assets/images/carrer-our-value-img.png">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="our-value-head middle">
+                    <div class="our-text">
+                        <h6>Our Values</h6>
+                        <p>At Career Transforms's, education is our passion, driven by our core values. We
+                            prioritize integrity, ensuring the highest academic and ethical standards in all our
+                            courses. Dedicated to excellence, our meticulously designed programs impart
+                            comprehensive knowledge and practical skills. Innovation is central, as we adapt to new
+                            technologies to prepare students for the future. With a student-centric approach, we
+                            foster growth and development, encouraging collaboration and peer-to-peer learning.
+                            Community engagement is integral, as we empower individuals and contribute to societal
+                            advancement. These values define our quest to provide transformative education.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- //////////////////////////////// -->
+
+<div class="services" id="benefits">
+    <div class="container">
+        <div class="services-head">
+            <h6>Career Transforms's Benefits</h6>
+            <p>From Basic to Advanced...<br>
+                We Offer Classroom, Online, and Corporate Training on a Wide Range of Software Courses.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-1.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Zero Skill to Techie:</h5>
+
+                                <p>From beginners to advanced learners, our programs cater to individuals at all
+                                    skill levels, transforming novices into proficient tech professionals.</p>
+                               
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="services-img middle">
+                                <img src="assets/images/Benefits-2.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Concept Orientation Learning: </h5>
+
+                                <p>Our training approach focuses on building a strong conceptual
+                                    foundation, fundamental principles before delving into advanced topics.</p>
+                             
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-3.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Concept-wise Real-time Projects: </h5>
+                                <p>Gain hands-on experience through real-world projects designed to reinforce
+                                    theoretical concepts and develop practical skills relevant to the industry.</p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-4.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Mock Interviews:</h5>
+                                <p>Prepare for job interviews with confidence through simulated interview sessions
+                                    that mimic real-world scenarios, providing valuable feedback and insights for
+                                    improvement.</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-5.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Internship Facility:</h5>
+                                <p>Access internship opportunities with our partner companies, allowing you to apply
+                                    your newly acquired skills in a professional work environment and gain valuable
+                                    industry experience.</p>
+                            
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-6.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Training Certificates:</h5>
+                                <p>Receive a training certificate upon successful completion of the program,
+                                    validating your skills and knowledge to prospective employers.
+                                </p>
+                              
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-7.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Workshops:</h5>
+                                <p>Receive a training certificate upon successful completion of the program,
+                                    validating your skills and knowledge to prospective employers.
+                                </p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-8.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Certification:</h5>
+                                <p>Earn industry-recognized certifications upon completion of specialized courses,
+                                    enhancing your credibility and marketability in the job market.</p>
+                             
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-9.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Fit for Any IT Company:</h5>
+                                <p>Our comprehensive training equips you with versatile skills that are in demand
+                                    across various IT sectors, making you a valuable asset to any company.</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-10.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Job Placement:</h5>
+                                <p>Benefit from our dedicated placement assistance services, connecting you with
+                                    top-tier companies and facilitating job placement opportunities to kickstart
+                                    your career in IT.</p>
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-11.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Customised Programs:</h5>
+                                <p>Tailoring educational or training programs to fit the specific needs, goals, and
+                                    skill levels of individual participants or groups.</p>
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-12.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Cutting-Edge Curriculum:</h5>
+                                <p>Developing course content or learning materials that incorporate the latest
+                                    advancements, trends, and innovations in a particular field or industry.</p>
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-13.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Interactive Learning:</h5>
+                                <p>Engaging participants in the learning process through active participation,
+                                    discussions, group activities, simulations, or other hands-on approaches, rather
+                                    than passive listening or reading.</p>
+                             
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-14.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Measurable Results:</h5>
+                                <p>Establishing clear, quantifiable learning objectives and assessment criteria to
+                                    evaluate participants' progress and performance throughout the program.</p>
+                             
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-15.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Career Advancement:</h5>
+                                <p>Providing resources, guidance, and support to help participants progress in their
+                                    careers, whether through promotions, job transitions, skill development, or
+                                    networking opportunities.</p>
+                             
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-16.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Improve Self Confidence :</h5>
+                                <p>Offering activities, workshops, or interventions aimed at boosting participants'
+                                    belief in their abilities, self-esteem, and assertiveness, particularly in
+                                    professional settings.</p>
+                             
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-17.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Resume Development:</h5>
+                                <p>Assisting participants in creating or refining resumes, cover letters, and other
+                                    job application showcase their skills, experiences, and qualifications to
+                                    potential employers.</p>
+                             
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-text" attr.data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-md-7">
+                           <div class="services-img middle">
+                                <img src="assets/images/Benefits-18.avif" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+
+                            <div class="training-service middle">
+                                <h5 class="line-clamp-1">Soft Skills:</h5>
+                                <p>Soft skills are essential non-technical abilities like communication, teamwork,
+                                    leadership, problem-solving, time management, adaptability, and emotional
+                                    intelligence, crucial for success in the workplace.</p>
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /////////////////////////////////// -->
+
+<div class="Organizations">
+    <div class="container-fluid">
+        <div class="scroll-containers">
+            <div class=" Hiring">
+                <p>100+ Hiring Organizations</p>
+            </div>
+            <div class="scroll-contents">
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/1.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/3.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/4.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/5.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/6.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/7.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/8.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/9.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/10.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/1.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/3.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/4.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/5.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-contents">
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/11.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/12.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/13.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/14.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/15.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/16.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/17.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/18.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/19.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/20.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/11.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/12.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/13.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/14.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/15.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-contents">
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/21.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/22.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/23.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/24.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/25.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/26.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/27.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/28.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/29.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/30.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/21.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/22.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/23.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/24.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/25.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-contents">
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/31.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/32.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/1.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/4.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/5.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/6.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/7.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/8.webp" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/31.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/32.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/1.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/2.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-contents">
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/9.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/10.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/11.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/12.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/13.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/14.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/15.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/16.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/17.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/18.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/9.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/10.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/11.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/12.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="Product-item">
+                        <img src="assets/images/13.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ///////////////////////// -->
+
+<div class="contact" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-main-text">
+                    <div class="contact-heder">
+                        <h6>We love to help you</h6>
+                        <p>Explore new and trending free online courses.</p>
+                    </div>
+                    <div class="contact-text">
+                        <i class="bi bi-phone"></i>
+                        <div class="location">
+                            <h6>Call</h6>
+                            <p>+91 9553894107</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contact-text">
+                        <i class="bi bi-envelope"></i>
+                        <div class="location">
+                            <h6>Email</h6>
+                            <p>info@careertransforms.com</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contact-text">
+                        <i class="bi bi-geo-alt"></i>
+                        <div class="location">
+                            <h6>Location</h6>
+                            <p>Pillar no 1642, Usha jubilee township 36, 4th floor, Beside peddamma gudi metro
+                                station, Road no :36, Jubilee Hills, Hyderabad, India 500033</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d475.82716637190316!2d78.4085551!3d17.4301427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91366dd37c1d%3A0x8f2b34fe36913deb!2sHEPPPP%20%26%20Kushal%E2%80%99s%2C%20Jubliee%20Hills!5e0!3m2!1sen!2sin!4v1715438460545!5m2!1sen!2sin"
+                        width="600" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="footer-logo">
+                    <img src="assets/images/nav-logo.png" alt="">
+                </div>
+                <p>Cras fermentum odio eu feugiat lide par naso tierra.</p>
+                <div class="social-links d-flex">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                <div class=" footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Home</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">About us</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Services</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Terms of service</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Privacy policy</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                <div class=" footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Web Design</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Web Development</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Product Management</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Marketing</a></li>
+                      <li><i class="bi bi-arrow-right-short"></i><a href="#">Graphic Design</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p><i class="bi bi-geo-alt"></i> A108 Adam Street New York, NY 535022 United States</p>
+                    <p><i class="bi bi-telephone-inbound"></i> <strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                    <p><i class="bi bi-envelope-at"></i> <strong>Email:</strong> <span>info@example.com</span></p>
+                  </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+</body>
+
+</html>
